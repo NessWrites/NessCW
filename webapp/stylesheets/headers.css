@@ -1,0 +1,383 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+	--color-white:hsl(252, 30%, 100%);
+	--color-light:hsl(252, 30%, 95%);
+	--color-gray:hsl(252, 15%, 65%);
+	--color-primary:hsl(252, 75%, 60%);
+	--color-secondary:hsl(252, 100%, 90%);
+	--color-success:hsl(120, 95%, 65%);
+	--color-danger:hsl(0, 95%, 65%);
+	--color-dark:hsl(252, 30%, 17%);
+	--color-black:hsl(252, 30%, 10%);
+	
+	--border-radius: 2rem;
+	--card-border-radius: 1rem;
+	--btn-padding: 0.9rem 2 rem;
+	--search-padding: 0.6rem 1 rem;
+	--card-padding: 1rem;
+	
+	
+}
+
+*,
+* ::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	outline:0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	border: none;	
+	
+	
+	
+	
+}
+
+body{
+	font-family: "Poppins", sans-serif;
+	color: var(--color-dark);
+	background: var(--color-light);
+	overflow-x: hidden;	
+}
+
+/*General Styles*/
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.profile-photo{
+	width: 2.7 rem;
+	aspect-ratio: 1/1; /*makes a perfect square*/
+	 border-radius:50%;
+	 overflow: hidden;
+}
+
+img{
+	display: block;
+	width: 100%;
+}
+
+
+.btn{
+	display: inline-block;
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 0.9 rem;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn-primary {
+	background: var(--color-primary);
+	color: rgb(255, 0, 76);
+}
+
+.text-bold{
+	font-weight:500;
+}
+
+.text-muted {
+	color:var(--color-gray);
+}
+
+/*=====================NAVBAR===================*/
+nav{
+	width: 100%;
+	background: var(--color-white);
+	padding: 0.7rem 0;
+	position: fixed;
+	top:0;
+	z-index: 10;
+}
+
+nav .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .search-bar{
+	background: var(--color-light);
+	border-radius: var(--border-radius);
+	padding: var(--search-padding);
+}
+
+nav .search-bar input[type = "search"]{
+	background: transparent;
+	width: 30vw;
+	margin-left: 1rem;
+	font-size: 0.9rem;
+	color: var(--color-dark);
+	
+}
+nav .search-bar input[type = "search"]::placeholder{
+	color: var(--color-gray);
+}
+
+nav .create{
+	display: flex;
+	align-items: center;
+	gap: 1 rem;
+	
+}
+
+
+.leftverticalmenu {
+    height: 100vh;
+    width: 300px;
+    text-align: left;
+    line-height: 60px;
+    font-size: 20px;
+    border-right: 1px solid rgb(155, 157, 160);
+    position: fixed;
+
+}
+
+ul {
+    margin: auto;
+    width: 50%;
+    margin-top: -10px;
+
+}
+
+.profileimage {
+    border-radius: 50%;
+    border: 2px solid rgb(43, 43, 223);
+    width: 25px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+
+figure {
+    border-radius: 50px;
+    height: 55px;
+    font-weight: bold;
+    background-color: rgb(29, 161, 242);
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+figure:hover {
+    opacity: 0.9;
+}
+
+/* MIDDLE AND RIGHT CONTAINERS */
+
+.flexcontainer {
+    position: absolute;
+    left: 300px;
+}
+
+.middlecontainer {
+    width: 700px;
+    border-right: 1px solid rgb(155, 157, 160);
+    height: 100%;
+
+}
+
+.headsec {
+    display: flex;
+    margin-top: 10px;
+
+}
+
+#fa-arrow-left {
+    color: blue;
+    filter: brightness(70%);
+    font-size: 20px;
+    margin: 10px 20px 0 20px;
+    cursor: pointer;
+}
+
+span {
+    filter: brightness(50%)
+}
+
+.headerprofileimage {
+    margin-top: 10px;
+    position: relative;
+
+
+}
+
+#headerimage {
+    width: 700px;
+  height:200px;
+}
+
+#profilepic {
+    border-radius: 50%;
+    width: 150px;
+  height:130px;
+    position:absolute;
+    top: 130px;
+    left: 20px;
+    border: 4px solid rgb(21, 32, 43);
+}
+
+.editprofile {
+    margin-top: 5px;
+    float: right;
+    border: 1px solid rgb(155, 157, 160);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.bio {
+    margin-top: 55px;
+    margin-left: 20px;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+.handle {
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+.followers {
+    margin-right: 15px;
+}
+
+.nawa {
+    display: flex;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    font-weight: bold;
+
+}
+
+.heading p {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.heading p:hover {
+    background: royalblue;
+}
+
+.avi {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.mytweets {
+    display: flex;
+    margin: 15px 0 15px 0;
+    margin-bottom: 800px;
+}
+
+.tweetcontent {
+    margin-top: 5px;
+}
+
+.retweeticons {
+    margin-top: 5px;
+    margin-left: -10px;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+
+/* RIGHT VERTICAL CONTAINER */
+
+.flexcontainer {
+    display: flex;
+}
+
+.searchbar {
+    display: inline-flex;
+    margin: 10px 0 0 25px;
+    border: 1px solid rgb(155, 157, 160);
+    padding: 13px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+#searchbox {
+    border: none;
+    background-color: transparent;
+    color: rgb(155, 157, 160);
+}
+
+.searchicon {
+    color: royalblue;
+    margin-right: 15px;
+}
+
+.twittermedia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid rgb(155, 157, 160);
+    border-radius: 20px;
+    margin: 10px 0 0 25px;
+    width: 300px;
+}
+
+.twittermedia img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.nigeriatrends {
+    margin: 30px 0 0 25px;
+    width: 300px;
+    border: 1px solid rgb(155, 157, 160);
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+#fa-cog {
+    color: royalblue;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.headertrends {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(155, 157, 160);
+    padding: 10px;
+}
+
+.trending {
+    filter: brightness(50%)
+}
+
+.trenditem {
+    border-bottom: 1px solid rgb(155, 157, 160);
+    padding: 10px;
+    line-height: 22px;
+}
+
+.hashtag {
+    font-weight: bolder;
+}
