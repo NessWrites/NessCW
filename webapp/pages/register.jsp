@@ -10,7 +10,7 @@
 <body>
 	<div class="container">
 		<h1>Registration Form</h1>
-		<form action="../RegisterServlet" method="post">
+		<form action="<%=request.getContextPath() %><%=StringUtil.SERVLET_URL_REGISTER%>" method="post" enctype="multipart/form-data">
 			<div class="row">
 				<div class="col">
 					<label for="firstName">First Name:</label> <input type="text"
@@ -27,8 +27,8 @@
 						id="username" name="username" required>
 				</div>
 				<div class="col">
-					<label for="birthday">Birthday:</label> <input type="date"
-						id="birthday" name="birthday" required>
+					<label for="dateOfBirth">Birthday:</label> <input type="date"
+						id="dateOfBirth" name="dateOfBirth" required> 
 				</div>
 
 			</div>
@@ -45,31 +45,39 @@
 						name="email" required>
 				</div>
 			</div>
+			
+			<div class="row">
+				<div class="col">
+					<label for="password">Password:</label> <input type="password"
+						id="password" value="aaa" name="password" required>
+				</div>
+				<div class="col">
+					<label for="retypePassword">Retype Password:</label> <input
+						type="password" value="aaa" id="retypePassword" name="retypePassword" required>
+				</div>
+			</div>
+			
+			
 			<div class="row">
 				<div class="col">
 					<label for="phoneNumber">Phone Number:</label> <input type="tel"
 						id="phoneNumber" name="phoneNumber" required>
 				</div>
 				<div class="col">
-					<label for="subject">Subject:</label> <select id="subject"
-						name="subject" required>
-						<option value="computing">Computing</option>
-						<option value="multimedia">Multimedia</option>
-						<option value="networking">Networking</option>
-						<option value="networking">A.I.</option>
-					</select>
+				<label for="userDescription">User Description:</label> <input type="desc"
+						id="userDescription" name="userDescription" required>
+					
 				</div>
 			</div>
+			
+			
 			<div class="row">
 				<div class="col">
-					<label for="password">Password:</label> <input type="password"
-						id="password" name="password" required>
-				</div>
-				<div class="col">
-					<label for="retypePassword">Retype Password:</label> <input
-						type="password" id="retypePassword" name="retypePassword" required>
+					<label for="image">Profile Picture</label> <input type="file"
+						id="image" name="image">
 				</div>
 			</div>
+			
 			<button type="submit">Submit</button>
 
 			<%

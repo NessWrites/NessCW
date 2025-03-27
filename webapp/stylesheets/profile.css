@@ -159,15 +159,14 @@ header section::before {
 header section .profile_post_follow_bx {
   position: relative;
   top: 18%;
-  width: 100vw;
-  height: 100%;
-  
+  width: 100%;
+  height: 73%;
   /* border: 1px solid #000; */
   display: flex;
   justify-content: center;
 }
 header section .profile_post_follow_bx .profile_bx {
-  width: 100%;
+  width: 250px;
   height: auto;
   /* border: 1px solid #000; */
 }
@@ -358,11 +357,11 @@ header section .profile_post_follow_bx .post_follow_bx {
   width: auto;
   height: auto;
   /* border: 1px solid #000; */
-  margin-left: 2px;
+  margin-left: 20px;
   display: flex;
 }
 header section .profile_post_follow_bx .post_follow_bx .post {
-  width: 100%;
+  width: 500px;
   height: 100%;
   background: #fff;
   box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.1);
@@ -1204,7 +1203,7 @@ header
   .post_follow_bx
   .follow_bx
   .trend_for_you {
-  width: 100%;
+  width: 80%;
   height: auto;
   background: #fff;
   box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.1);
